@@ -11,12 +11,12 @@ xml.rss :version => '2.0', 'xmlns:atom' => 'http://www.w3.org/2005/Atom' do
     for post in @posts
       xml.item do
         xml.title post.title
-        xml.category post.category.name
+        
         xml.pubDate(post.created_at.rfc2822)
         xml.link post_url(post)
         xml.guid post_url(post)
         xml.description(h(post.body))
-        xml.image_url post.image_url
+        # xml.image_url post.image_url
       end
     end
  
