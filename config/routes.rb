@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   
   get '/about', to: 'pages#about'
 
+  get 'feed.rss', to: 'feeds#rss', :format => 'rss'
+
 end
